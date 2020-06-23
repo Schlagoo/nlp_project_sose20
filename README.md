@@ -1,6 +1,6 @@
 # Project - Natural Language Processing (SoSe20)
 
-This repository contains our all items of our project in *Natural Language Processing*.
+This repository contains all required files of our project in *Natural Language Processing*.
 
 ### Installing
 
