@@ -21,9 +21,28 @@ Pdf:
 
 #### Resulting ideas
 
-* Crawl ImDB movie reviews and try to reverse engineer story based on analyzed information.
+* Crawl IMDb movie reviews and try to reverse engineer story based on analyzed information.
 * Predict movies to watch based on liked movies. Use text of plot to find similar movies.
 * Chat bot to find movie to watch by telling it what I like.
+
+
+
+### Project details
+
+### Data
+
+* Rating (x/10) in stars
+* Title
+* User
+* Date of creation
+* Description
+* Helpfulness (x of x found this helpful)
+
+### Crawler
+
+* [ ] tbd
+
+### 
 
 
 
