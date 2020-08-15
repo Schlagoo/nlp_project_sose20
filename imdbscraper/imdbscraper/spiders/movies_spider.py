@@ -7,7 +7,6 @@ class MoviesSpider(scrapy.Spider):
     name = "movies"
     start_urls = [
         "https://www.imdb.com/search/title/?groups=top_250&sort=user_rating",
-        "https://www.imdb.com/search/title/?groups=top_250&sort=user_rating,desc&start=51&ref_=adv_nxt"
     ]
 
     def parse(self, response):
@@ -19,6 +18,14 @@ class MoviesSpider(scrapy.Spider):
             startIndex = int(startIndexStr[0], base=10)
             page = int((startIndex - 1) / 50 + 1)
 
-        filename = "posts-%s.html" % page
-        with open(filename, "wb") as f:
-            f.write(response.body)
+        for movie in response.css("div.lister-item-content"):
+            yield {
+                "title": movie.css(".lister-item-header a::text")[0].get(),
+                "date": movie.css(".lister-item-header .lister-item-year::text")[0].get().replace('(', '').replace(')', ''),
+                "rank": movie.css(".lister-item-header .lister-item-index::text")[0].get().replace('.', '')
+            }
+            next_page = response.css(
+                "a.lister-page-next.next-page::attr(href)").get()
+            if next_page is not None:
+                next_page = response.urljoin(next_page)
+                yield scrapy.Request(next_page, callback=self.parse)
