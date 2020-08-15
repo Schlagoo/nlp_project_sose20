@@ -21,6 +21,12 @@ python3 ...
 
 ...
 
+### Crawl the movie data
+
+```
+scrapy crawl movies -o movies.json
+```
+
 ### Built with
 
 * [Python 3.6.9](https://www.python.org/) - Programming language
