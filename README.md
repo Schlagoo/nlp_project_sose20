@@ -1,38 +1,12 @@
-# Project - Natural Language Processing (SoSe20)
+# Projekt - Natural Language Processing (SoSe20)
 
-This repository contains all required files of our project in *Natural Language Processing*.
+In dieser Abgabe befinden sich alle relevante Dateien, die in diesem Projekt in "Natural Language Processing" erstellt wurden.
 
-### Installing
+Aufgrund der hohen Berechnungsdauer des Codes empfehlen wir lediglich das Durchlesen der Jupyter Notebooks. Alle Ausgaben wurden von uns bereits generiert. Im Verzeichnis *notebooks* befinden sich alle Jupyter Notebooks. Es sollte mit der Datei *0_nlp_intro_schlaak_weise.ipynb* begonnen werden. Weitere Informationen bezüglich Setup einer virtuellen Umgebung und Navigation zwischen den einzelnen Jupyter Notebooks sind in diesem Notebook enthalten.
 
-Before running the script clone the repository to your desired directory:
+Alternativ wurden alle Jupyter Notebooks als PDF konvertiert. Diese befinden sich im Verzeichnis *notebooks/pdfs*. Wir empfehlen jedoch das Öffnen der Jupyter Notebooks, da hier alle Outputs deutlich übersichtlicher dargestellt werden.
 
-~~~
-cd /path/to/desired/directory
-git clone git@github.com:Schlagoo/nlp_project_sose20.git
-~~~
+### Authoren
 
-After uncommenting the desired function, you can run the script from the terminal (UNIX) via:
-
-(Make shure you the file is executable: `sudo chmod +x ...`)  
-
-~~~
-python3 ...
-~~~
-
-...
-
-### Crawl the movie data
-
-```
-scrapy crawl movies -o movies.json
-```
-
-### Built with
-
-* [Python 3.6.9](https://www.python.org/) - Programming language
-* ...
-
-### Author
-
-* **Pascal Schlaak** - *MLD @ University of Aalen* - [Schlagoo](https://github.com/Schlagoo)
-* **Tim Weise** - *MIN @ University of Aalen* -  
+* **Pascal Schlaak** - *MLD @ Hochschule Aalen*
+* **Tim Weise** - *MIN @ Hochschule Aalen* 
